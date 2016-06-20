@@ -1,9 +1,10 @@
 'use strict';
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
+const webpack = require('webpack');
 
 module.exports = {
-  entry: './components/app',
+  entry: './components/render.jsx',
   output: {
     filename: './prod/build.js',
     library: 'dimtrans'
@@ -45,6 +46,6 @@ if(NODE_ENV == 'production') {
         drop_console: true,
         unsafe: true,
       }
-    });
+    })
   );
 }

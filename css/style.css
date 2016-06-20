@@ -1,0 +1,11 @@
+.nopadding {
+  padding: 6px 0 6px 0 !important;
+}
+
+tbody {
+  cursor: pointer !important;
+}
+
+.tdHover:hover {
+  background-color: orange !important;
+}

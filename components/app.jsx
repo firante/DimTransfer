@@ -1,10 +1,11 @@
 import React from 'react';
 
+import Content from './content.jsx';
+
 export default class App extends React.Component {
   render() {
     return (
-      <div className='col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xs-offset-1
-        col-sm-offset-1 col-md-offset-1 col-lg-offset-1'>
+      <div className='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
 
         <header className='text-center h3'></header>
 
@@ -29,7 +30,9 @@ export default class App extends React.Component {
           <div className="tab-content">
             <div role='tabpanel' className="tab-pane article" id='dolar'> Долар </div>
             <div role='tabpanel' className="tab-pane" id='euro'> Євро </div>
-            <div role='tabpanel' className="tab-pane" id='grn'> Гривня </div>
+            <div role='tabpanel' className="tab-pane" id='grn'>
+              <Content currencyContent = { this.props.data } />
+            </div>
             <div role='tabpanel' className="tab-pane" id='zlotiy'> Злотий </div>
           </div>
         </section>
@@ -37,4 +40,8 @@ export default class App extends React.Component {
       </div>
     );
   }
+}
+
+App.propTypes = {
+  data: React.PropTypes.array.isRequired,
 }
